@@ -158,10 +158,6 @@ a:visited {
 }
 
 .search-button {
-    max width: 25rem;
-}
-
-.search-button {
     height: 100%;
     display: flex;
     align-items: center;
@@ -171,6 +167,11 @@ a:visited {
     background: transparent;
     border: none;
     cursor: pointer;
+}
+
+.submit {
+    width: 10rem;
+    background: none;
 }
 
 .h3 {
