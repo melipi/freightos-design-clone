@@ -21,6 +21,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
 }
 
 nav {
@@ -36,10 +38,6 @@ h2,
 h3,
 h4 {
     font-family: 'Rajdhani', sans-serif; 
-}
-
-h3 {
-    color: rgba(0,0,0,0.85);
 }
 
 .center {
@@ -103,6 +101,10 @@ a:visited {
     padding-left: .3rem;
 }
 
+main {
+    overflow: auto;
+}
+
 .hero {
     padding-bottom: 3rem;
 }
@@ -111,11 +113,6 @@ a:visited {
     font-weight: 600;
     font-size: 2rem;
     text-transform: uppercase;
-}
-
-.hero-text {
-    font-weight: 400;
-    font-size: .9rem;
 }
 
 .search-bar {
@@ -137,21 +134,16 @@ a:visited {
     padding: .5rem 1rem;
     font-size: .8rem;
 
-    /* From the Freightos Website*/
+    /* From the Freightos Website */
     background: linear-gradient(rgb(198, 199, 199), rgb(198, 199, 199)) right center / 1px 40% no-repeat, transparent;
     background-repeat: no-repeat;
-}
-
-.search-section:last-child {
-    background: none;
-    width: 4rem;
 }
 
 .search-subtitle {
     font-size: .7rem;
     font-weight: 500;
     color: #4A4E69;
-    /* From freightos styles */
+    /* From the Freightos Website */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -189,6 +181,44 @@ a:visited {
 
 .dropdown-label {
     padding-bottom: .5rem;
+}
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 600rem;
+}
+
+.content-items {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 100%;
+    max-width: 18.75rem;
+    margin-top: 5rem;
+}
+
+.placeholder-img {
+    height: 150px;
+    background: rgba(0,0,0,0.25);
+    margin-bottom: 1rem;
+}
+
+.content-heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.85);
+    margin-bottom: 1rem;
+}
+
+.content-text {
+    font-size: .8rem;
+    line-height: 1.25rem;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
 }
 
 footer {
