@@ -198,7 +198,7 @@ main {
     width: 20vw;
     height: 100%;
     max-width: 18.75rem;
-    margin-top: 5rem;
+    margin: 5rem 0 3rem 0;
 }
 
 .placeholder-img {
@@ -218,6 +218,20 @@ main {
     line-height: 1.5rem;
     color: rgba(0,0,0,1);
     margin-bottom: 1rem;
+}
+
+.content-button {
+    text-align: left;
+    /* Button reset from https://codepen.io/chriscoyier/pen/yjJwjL */
+    border: 0;
+    background: none;
+    color: #1E88E5;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 footer {
