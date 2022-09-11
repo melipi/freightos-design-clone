@@ -2,8 +2,8 @@
 // https://medium.com/@kyleducharme/developing-custom-dropdowns-with-vanilla-js-css-in-under-5-minutes-e94a953cee75
 
 const dropdownIcon = () => {
-    const dropdown = document.createElement("span");
-    dropdown.innerHTML = `<svg width="14px" height="7px" viewBox="0 0 10 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    const dropdownArrow = document.createElement("span");
+    dropdownArrow.innerHTML = `<svg width="14px" height="7px" viewBox="0 0 10 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="Delivery" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Transactions-(Landing)" transform="translate(-1360.000000, -29.000000)" fill="#CDCFD3" fill-rule="nonzero">
             <g id="Group-4" transform="translate(1360.000000, 29.000000)">
@@ -13,30 +13,56 @@ const dropdownIcon = () => {
         </g>
     </svg>`;
 
-    return dropdown;
+    return dropdownArrow;
 }
 
-const selections = [{
+const JSON = {
+    data: [
+        {id: 1, title: "move type", options: [
+            {abbrev: "SD", full: "Store Door"},
+            {abbrev: "CY", full: "Container Yard"}
+        ]},
+        {id: 2, title: "country", options: [
+            {abbrev: "US", full: "United States"},
+            {abbrev: "GT", full: "Guatemala"}
+        ]}
+    ]
+};
+
+const moves = [{
         id: 1,
         abbrev: "SD",
-        type: "Store Door"
+        full: "Store Door"
     },
     {
         id: 2,
         abbrev: "CY",
-        type: "Container Yard"
+        full: "Container Yard"
+    }
+];
+
+const countries =[{
+        id: 1,
+        abbrev: "US",
+        full: "United States"
+    },
+    {
+        id: 2,
+        abbrev: "GT",
+        full: "Guatemala"
     }
 ];
 
 // DOM references
 const moveType = document.querySelector("#move-type");
+const country = document.querySelector("#country");
 
 // Create structure
-const dropdown = (printArea) => {
+const dropdown = (printArea, selections) => {
     const component = document.createElement("div");
 
     const input = createInput();
-    const dropdown = showDropdown();
+    const dropdown = showDropdown(selections);
 
     component.appendChild(input);
     component.appendChild(dropdown);
@@ -68,12 +94,13 @@ const createInput = () => {
 };
 
 // Create dropdown with options
-const showDropdown = () => {
+const showDropdown = (selections) => {
     const structure = document.createElement("div");
     structure.classList.add("structure", "hide");
+    console.log(selections);
 
     selections.forEach(selection => {
-        const { id, abbrev, type } = selection;
+        const { id, abbrev, full } = selection;
         const option = document.createElement("div");
         option.addEventListener("click", () => selectOption(abbrev));
         option.setAttribute("id", id);
@@ -82,7 +109,7 @@ const showDropdown = () => {
         abbrevDisplay.textContent = abbrev;
 
         const typeDisplay = document.createElement("p");
-        typeDisplay.textContent = `(${type})`;
+        typeDisplay.textContent = `(${full})`;
 
         option.appendChild(abbrevDisplay);
         option.appendChild(typeDisplay);
@@ -109,4 +136,5 @@ const selectOption = (abbrev) => {
     toggleDropdown();
 };
 
-dropdown(moveType);
+dropdown(moveType, moves);
+dropdown(country, countries);
