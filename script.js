@@ -16,6 +16,8 @@ const dropdownIcon = () => {
     return dropdownArrow;
 }
 
+// Idea & structure from https://codepen.io/jasesnider/pen/QKLQgP?editors=0011
+
 const JSON = {
     data: [
         {id: 1, title: "move type", options: [
@@ -97,7 +99,6 @@ const createInput = () => {
 const showDropdown = (selections) => {
     const structure = document.createElement("div");
     structure.classList.add("structure", "hide");
-    console.log(selections);
 
     selections.forEach(selection => {
         const { id, abbrev, full } = selection;
