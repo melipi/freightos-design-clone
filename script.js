@@ -122,11 +122,15 @@ const showDropdown = (selections) => {
 
 // 1st click event - Toggles dropdown
 const toggleDropdown = () => {
-    const dropdown = document.querySelector(".structure");
-    dropdown.classList.toggle("hide");
+    const dropdown = document.querySelectorAll(".structure");
+    dropdown.forEach( e => {
+        e.classList.toggle("hide");
+    });
 
-    const input = document.querySelector(".input");
-    input.classList.toggle("input__active");
+    const input = document.querySelectorAll(".input");
+    input.forEach( e => {
+        e.classList.toggle("input__active");
+    });
 };
 
 // 2nd click event - Gathers and shows dropdown selection
