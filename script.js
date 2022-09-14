@@ -85,7 +85,7 @@ const createInput = () => {
 
     const placeholder = document.createElement("p");
     placeholder.textContent = "Select move type";
-    placeholder.classList.add('palceholder');
+    placeholder.classList.add('placeholder');
 
     // Appends placeholder and chevron
     inputPlaceholder.appendChild(placeholder);
@@ -135,9 +135,13 @@ const toggleDropdown = () => {
 
 // 2nd click event - Gathers and shows dropdown selection
 const selectOption = (abbrev) => {
-    const text = document.querySelector(".placeholder");
-    text.textContent = abbrev;
-    text.classList.add("input__selected");
+    const text = document.querySelectorAll(".placeholder");
+
+    text.forEach ( e => {
+        e.textContent = abbrev;
+        e.classList.add("input__selected");
+    });
+
     toggleDropdown();
 };
 
