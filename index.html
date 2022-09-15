@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/base.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+    <link rel="stylesheet" href="./style.css">
     <title>Freightos Design Clone</title>
 </head>
 <body>
@@ -30,6 +32,37 @@
                 <p>Origin</p>
                 <p class="search-subtitle">Where are you shipping from?</p>
             </div>
+            <div class="search-dropdown">
+                <h3 class="h3">Where are you shipping from?</h3>
+                <div class="dropdown-answer">
+                    <div>
+                        <p class="dropdown-label">
+                            <label for="origin-moves">Type</label>
+                        </p>
+                        <div class="select">
+                            <select name="origin-move-types" id="origin-moves">
+                                <option value="">Please select an option</option>
+                                <option value="sd">Door (SD)</option>
+                                <option value="cy">Port (CY)</option>
+                            </select>
+                            <span class="focus"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="dropdown-label">
+                            <label for="origin-moves">Port</label>
+                        </p>
+                        <div class="select">
+                            <select name="origin-move-port" id="origin-port">
+                                <option value="">Please select an option</option>
+                                <option value="sd">Door (SD)</option>
+                                <option value="cy">Port (CY)</option>
+                            </select>
+                            <span class="focus"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="search-section">
                 <p>Destination</p>
                 <p class="search-subtitle">Where are you shipping to?</p>
@@ -47,26 +80,6 @@
                     <i aria-label="icon: arrow-forward" class="anticon anticon-arrow-forward common__fdsComponent__1PAUE Icon__fdsIcon__2BtPJ Icon__medium__1mkIx" style="color: inherit;"><svg viewBox="0 0 32 32" class="" data-icon="arrow-forward" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M16 5.33l-1.88 1.88 7.44 7.46H5.33v2.66h16.23l-7.44 7.46L16 26.67 26.67 16 16 5.33z"></path></svg></i>
                 </button>
             </div>
-            <div class="search-dropdown"></div>
-        </div>
-        <div class="search-options">
-            <section class="origin-options">
-                <h3 class="option-heading">Where are you shipping from?</h3>
-                <div class="options-wrapper">
-                    <div class="options-section">
-                        <h6>Type</h6>
-                        <div class="dropdown" id="move-type"></div>
-                    </div>
-                    <div class="options-section">
-                        <h6>Country</h6>
-                        <div class="dropdown" id="country"></div>
-                    </div>
-                    <div class="options-section">
-                        <h6>Address</h6>
-                        <div class="address dropdown"></div>
-                    </div>
-                </div>
-            </section>
         </div>
         <article class="content">
             <section class="content-items">
@@ -93,6 +106,7 @@
         <p>Customer Support: US +1 123 456 7890 | UK +44 12 3456 7890</p>
         <p>Made with ❤️ by <a href="">melipi</a></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
