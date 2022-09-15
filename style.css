@@ -140,6 +140,7 @@ main {
     width: 100%;
     padding: .5rem 1rem;
     font-size: .8rem;
+    cursor: pointer;
 
     /* From the Freightos Website */
     background: linear-gradient(rgb(198, 199, 199), rgb(198, 199, 199)) right center / 1px 40% no-repeat, transparent;
