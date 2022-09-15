@@ -28,14 +28,14 @@
             <p class="hero-text center">Compare, book, and manage your freight across the world's top logistics providers, all on one platform.</p>
         </header>
         <div class="search-bar">
-            <div class="search-section origin">
+            <div class="search-section" id="origin-search">
                 <p>Origin</p>
                 <p class="search-subtitle">Where are you shipping from?</p>
             </div>
-            <div class="search-dropdown">
+            <div class="search-dropdown hide" id="origin-dropdown">
                 <h3 class="h3">Where are you shipping from?</h3>
-                <div class="dropdown-answer">
-                    <div>
+                <div class="options-wrapper">
+                    <div class="dropdown-origin-type">
                         <p class="dropdown-label">
                             <label for="origin-moves">Type</label>
                         </p>
@@ -48,7 +48,7 @@
                             <span class="focus"></span>
                         </div>
                     </div>
-                    <div>
+                    <div class="dropdown-origin-port">
                         <p class="dropdown-label">
                             <label for="origin-moves">Port</label>
                         </p>
