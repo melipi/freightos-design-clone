@@ -55,8 +55,8 @@
                         <div class="select">
                             <select name="origin-move-port" id="origin-port">
                                 <option value="">Please select an option</option>
-                                <option value="sd">Door (SD)</option>
-                                <option value="cy">Port (CY)</option>
+                                <option value="sd">GTPRQ (Puerto Quetzal, GT)</option>
+                                <option value="cy">COBUN (Buenaventura, CO)</option>
                             </select>
                             <span class="focus"></span>
                         </div>
@@ -66,6 +66,37 @@
             <div class="search-section">
                 <p>Destination</p>
                 <p class="search-subtitle">Where are you shipping to?</p>
+            </div>
+            <div class="search-dropdown hide" id="dest-dropdown">
+                <h3 class="h3">Where are you shipping to?</h3>
+                <div class="options-wrapper">
+                    <div class="dropdown-origin-type">
+                        <p class="dropdown-label">
+                            <label for="dest-moves">Type</label>
+                        </p>
+                        <div class="select">
+                            <select name="dest-move-types" id="dest-moves">
+                                <option value="">Please select an option</option>
+                                <option value="sd">Door (SD)</option>
+                                <option value="cy">Port (CY)</option>
+                            </select>
+                            <span class="focus"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown-dest-port">
+                        <p class="dropdown-label">
+                            <label for="dest-moves">Port</label>
+                        </p>
+                        <div class="select">
+                            <select name="dest-move-port" id="dest-port">
+                                <option value="">Please select an option</option>
+                                <option value="sd">JMKIN (Kingston, JM)</option>
+                                <option value="cy">TTPOS (Port of Spain, TT)</option>
+                            </select>
+                            <span class="focus"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="search-section">
                 <p>Load</p>

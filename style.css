@@ -273,6 +273,11 @@ main {
     left: -.1rem;
 }
 
+#dest-dropdown {
+    top: 4.25rem;
+    left: 11rem;
+}
+
 .h3 {
     font-size: 1.15rem;
     padding-bottom: 1rem;
