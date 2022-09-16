@@ -30,7 +30,9 @@ const searchSections = document.querySelectorAll(".search-section");
 
 searchSections.forEach ( elem => {
     elem.addEventListener("click", e => {
-        elem.nextElementSibling.classList.toggle("hide");
+        if (elem.nextElementSibling.classList.contains("search-dropdown")) {
+            elem.nextElementSibling.classList.toggle("hide");
+        };
     });
 });
 
