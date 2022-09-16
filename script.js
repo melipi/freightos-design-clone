@@ -32,7 +32,7 @@ searchSections.forEach ( elem => {
     elem.addEventListener("click", e => {
         console.log("clicked!", elem);
         if (e.target.nextElementSibling.classList.contains("search-dropdown")) {
-            e.target.nextElementSibling.classList.toggle("hide");
+            elem.nextElementSibling.classList.toggle("hide");
         };
     });
 });
