@@ -15,14 +15,26 @@
 // });
 
 // Event Delegation Version
-const searchBar = document.querySelector(".search-bar");
-const searchSection = document.querySelector(".search-section");
+// const searchBar = document.querySelector(".search-bar");
+// const searchSection = document.querySelector(".search-section");
 
-searchBar.addEventListener("click", e => {
-    if(e.target.className === "search-section") {
-        e.preventDefault();
-        e.target.nextElementSibling.classList.toggle("hide");
-    }
+// searchBar.addEventListener("click", e => {
+//     console.log(e.target.parentNode);
+
+//     if(e.target.className === "search-section") {
+//         e.target.nextElementSibling.classList.toggle("hide");
+//     }
+// });
+
+const searchSections = document.querySelectorAll(".search-section");
+
+searchSections.forEach ( elem => {
+    elem.addEventListener("click", e => {
+        console.log("clicked!", elem);
+        if (e.target.nextElementSibling.classList.contains("search-dropdown")) {
+            e.target.nextElementSibling.classList.toggle("hide");
+        };
+    });
 });
 
 // Choices.js dropdown menus
