@@ -171,6 +171,7 @@ main {
 }
 
 .submit {
+    padding: 1rem;
     width: 10rem;
     background: none;
 }

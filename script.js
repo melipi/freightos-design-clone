@@ -27,14 +27,22 @@
 // });
 
 const searchSections = document.querySelectorAll(".search-section");
+const dropdowns = document.querySelectorAll(".search-dropdown");
 
 searchSections.forEach ( elem => {
     elem.addEventListener("click", e => {
         if (elem.nextElementSibling.classList.contains("search-dropdown")) {
+            hideDropdowns(); // Only one dropdown open at a time before toggle
             elem.nextElementSibling.classList.toggle("hide");
-        };
+        }
     });
 });
+
+const hideDropdowns = () => {
+    dropdowns.forEach( elem => {
+        elem.classList.add("hide");
+    });
+}
 
 // Choices.js dropdown menus
 
