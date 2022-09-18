@@ -28,6 +28,7 @@
 
 const searchSections = document.querySelectorAll(".search-section");
 const dropdowns = document.querySelectorAll(".search-dropdown");
+const searchBar = document.querySelector(".search-bar");
 
 searchSections.forEach ( elem => {
     elem.addEventListener("click", e => {
@@ -38,18 +39,26 @@ searchSections.forEach ( elem => {
     });
 });
 
-// Close dropdown if user clicks outside of the dropdown or search section
-window.addEventListener("click", e => {
-    if(!e.target.classList.contains("search-section") && !e.target.classList.contains("search-dropdown")) {
-        hideDropdowns();
-    }
-});
-
 const hideDropdowns = () => {
     dropdowns.forEach( elem => {
         elem.classList.add("hide");
     });
 }
+
+// // Buggy, selecting from dropdown closes dropdown
+// window.addEventListener("click", e => {
+//     if(!e.target.classList.contains("search-section") && !e.target.classList.contains("search-dropdown")) {
+//         hideDropdowns();
+//     }
+// });
+
+document.addEventListener("click", e => {
+    dropdowns.forEach( elem => {
+        if(!elem.contains(e.target) && !searchBar.contains(e.target)) {
+            hideDropdowns();
+        }
+    });
+});
 
 // Choices.js dropdown menus
 
