@@ -38,6 +38,13 @@ searchSections.forEach ( elem => {
     });
 });
 
+// Close dropdown if user clicks outside of the dropdown or search section
+window.addEventListener("click", e => {
+    if(!e.target.classList.contains("search-section") && !e.target.classList.contains("search-dropdown")) {
+        hideDropdowns();
+    }
+});
+
 const hideDropdowns = () => {
     dropdowns.forEach( elem => {
         elem.classList.add("hide");
