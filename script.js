@@ -32,7 +32,7 @@ const dropdowns = document.querySelectorAll(".search-dropdown");
 searchSections.forEach ( elem => {
     elem.addEventListener("click", e => {
         if (elem.nextElementSibling.classList.contains("search-dropdown")) {
-            hideDropdowns(); // Only one dropdown open at a time before toggle
+            hideDropdowns(); // Apply the .hide class before toggling the section's dropdown
             elem.nextElementSibling.classList.toggle("hide");
         }
     });

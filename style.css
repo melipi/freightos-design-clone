@@ -257,6 +257,7 @@ main {
 
 .search-dropdown {
     position: absolute;
+    top: 4.25rem;
     width: 30rem;
     height: 15rem;
     min-width: 10rem;
@@ -270,13 +271,19 @@ main {
 }
 
 #origin-dropdown {
-    top: 4.25rem;
     left: -.1rem;
 }
 
 #dest-dropdown {
-    top: 4.25rem;
-    left: 11rem;
+    left: 5rem;
+}
+
+#load-dropdown {
+    right: 5rem;
+}
+
+#goods-dropdown {
+    right: -.1rem;
 }
 
 .h3 {
@@ -295,7 +302,7 @@ main {
     padding-bottom: .5rem;
 }
 
-/* Custom dropdown info: https://moderncss.dev/custom-select-styles-with-pure-css/ */
+/* Custom dropdown info: https://moderncss.dev/custom-select-styles-with-pure-css/
 
 select {
     appearance: none;
@@ -355,7 +362,7 @@ select:focus + .focus {
     bottom: -1px;
     border: 2px solid var(--accent-blue);
     border-radius: inherit;
-}
+} */
 
 footer {
     padding: 1rem;

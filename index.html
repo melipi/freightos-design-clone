@@ -42,10 +42,9 @@
                         <div class="select">
                             <select name="origin-move-types" id="origin-moves">
                                 <option value="">Please select an option</option>
-                                <option value="sd">Door (SD)</option>
-                                <option value="cy">Port (CY)</option>
+                                <option value="origin-sd">Door (SD)</option>
+                                <option value="origin-cy">Port (CY)</option>
                             </select>
-                            <span class="focus"></span>
                         </div>
                     </div>
                     <div class="dropdown-origin-port">
@@ -55,10 +54,9 @@
                         <div class="select">
                             <select name="origin-move-port" id="origin-port">
                                 <option value="">Please select an option</option>
-                                <option value="sd">GTPRQ (Puerto Quetzal, GT)</option>
-                                <option value="cy">COBUN (Buenaventura, CO)</option>
+                                <option value="gtprq">GTPRQ (Puerto Quetzal, GT)</option>
+                                <option value="cobun">COBUN (Buenaventura, CO)</option>
                             </select>
-                            <span class="focus"></span>
                         </div>
                     </div>
                 </div>
@@ -70,17 +68,16 @@
             <div class="search-dropdown hide" id="dest-dropdown">
                 <h3 class="h3">Where are you shipping to?</h3>
                 <div class="options-wrapper">
-                    <div class="dropdown-origin-type">
+                    <div class="dropdown-dest-type">
                         <p class="dropdown-label">
                             <label for="dest-moves">Type</label>
                         </p>
                         <div class="select">
                             <select name="dest-move-types" id="dest-moves">
                                 <option value="">Please select an option</option>
-                                <option value="sd">Door (SD)</option>
-                                <option value="cy">Port (CY)</option>
+                                <option value="dest-sd">Door (SD)</option>
+                                <option value="dest-cy">Port (CY)</option>
                             </select>
-                            <span class="focus"></span>
                         </div>
                     </div>
                     <div class="dropdown-dest-port">
@@ -90,10 +87,9 @@
                         <div class="select">
                             <select name="dest-move-port" id="dest-port">
                                 <option value="">Please select an option</option>
-                                <option value="sd">JMKIN (Kingston, JM)</option>
-                                <option value="cy">TTPOS (Port of Spain, TT)</option>
+                                <option value="jmkin">JMKIN (Kingston, JM)</option>
+                                <option value="ttpos">TTPOS (Port of Spain, TT)</option>
                             </select>
-                            <span class="focus"></span>
                         </div>
                     </div>
                 </div>
@@ -102,9 +98,56 @@
                 <p>Load</p>
                 <p class="search-subtitle">What are you shipping?</p>
             </div>
+            <div class="search-dropdown hide" id="load-dropdown">
+                <h3 class="h3">What are you shipping?</h3>
+                <div class="options-wrapper">
+                    <div class="dropdown-load-size-types">
+                        <p class="dropdown-label">
+                            <label for="load-size">Container Size</label>
+                        </p>
+                        <div class="select">
+                            <select name="load-size-types" id="load-size">
+                                <option value="">Please select an option</option>
+                                <option value="20">20'</option>
+                                <option value="40">40'</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dropdown-cntr-types">
+                        <p class="dropdown-label">
+                            <label for="load-types">Container Type</label>
+                        </p>
+                        <div class="select">
+                            <select name="cntr-types" id="load-types">
+                                <option value="">Please select an option</option>
+                                <option value="dv">DV</option>
+                                <option value="hc">HC</option>
+                                <option value="rf">RF</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="search-section" id="goods-search">
                 <p>Goods</p>
                 <p class="search-subtitle">Tell us about your goods</p>
+            </div>
+            <div class="search-dropdown hide" id="goods-dropdown">
+                <h3 class="h3">What goods are you shipping?</h3>
+                <div class="options-wrapper">
+                    <div class="dropdown-goods-type">
+                        <p class="dropdown-label">
+                            <label for="goods">Type of Goods</label>
+                        </p>
+                        <div class="select">
+                            <select name="goods-types" id="goods">
+                                <option value="">Please select an option</option>
+                                <option value="sugar">Sugar</option>
+                                <option value="pineapples">Pineapples</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="submit">
                 <button class="search-button">
