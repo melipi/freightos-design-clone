@@ -61,4 +61,4 @@ document.addEventListener("click", e => {
 });
 
 // Choices.js dropdown menus
-
+const choices = new Choices("select");
