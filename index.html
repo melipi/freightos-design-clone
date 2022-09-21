@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
@@ -38,7 +39,7 @@
                             <label for="origin-moves">Type</label>
                         </p>
                         <div class="select">
-                            <select class="select" name="origin-move-types" id="origin-moves">
+                            <select class="form-select form-select-sm" name="origin-move-types" id="origin-moves" aria-label="Origin Move Type Select">
                                 <option value="">Please select an option</option>
                                 <option value="origin-sd">Door (SD)</option>
                                 <option value="origin-cy">Port (CY)</option>
@@ -50,7 +51,7 @@
                             <label for="origin-port">Port</label>
                         </p>
                         <div class="select">
-                            <select class="select" name="origin-move-port" id="origin-port">
+                            <select class="form-select form-select-sm" name="origin-move-port" id="origin-port">
                                 <option value="">Please select an option</option>
                                 <option value="gtprq">GTPRQ (Puerto Quetzal, GT)</option>
                                 <option value="cobun">COBUN (Buenaventura, CO)</option>
@@ -71,7 +72,8 @@
                             <label for="dest-moves">Type</label>
                         </p>
                         <div class="select">
-                            <select name="dest-move-types" id="dest-moves">
+                            <select class="form-select form-select-sm"
+                            name="dest-move-types" id="dest-moves">
                                 <option value="">Please select an option</option>
                                 <option value="dest-sd">Door (SD)</option>
                                 <option value="dest-cy">Port (CY)</option>
@@ -83,7 +85,8 @@
                             <label for="dest-moves">Port</label>
                         </p>
                         <div class="select">
-                            <select name="dest-move-port" id="dest-port">
+                            <select class="form-select form-select-sm"
+                            name="dest-move-port" id="dest-port">
                                 <option value="">Please select an option</option>
                                 <option value="jmkin">JMKIN (Kingston, JM)</option>
                                 <option value="ttpos">TTPOS (Port of Spain, TT)</option>
@@ -104,7 +107,8 @@
                             <label for="load-size">Container Size</label>
                         </p>
                         <div class="select">
-                            <select name="load-size-types" id="load-size">
+                            <select class="form-select form-select-sm"
+                            name="load-size-types" id="load-size">
                                 <option value="">Please select an option</option>
                                 <option value="20">20'</option>
                                 <option value="40">40'</option>
@@ -116,7 +120,8 @@
                             <label for="load-types">Container Type</label>
                         </p>
                         <div class="select">
-                            <select name="cntr-types" id="load-types">
+                            <select class="form-select form-select-sm"
+                            name="cntr-types" id="load-types">
                                 <option value="">Please select an option</option>
                                 <option value="dv">DV</option>
                                 <option value="hc">HC</option>
@@ -138,7 +143,8 @@
                             <label for="goods">Type of Goods</label>
                         </p>
                         <div class="select">
-                            <select name="goods-types" id="goods">
+                            <select class="form-select form-select-sm"
+                            name="goods-types" id="goods">
                                 <option value="">Please select an option</option>
                                 <option value="sugar">Sugar</option>
                                 <option value="pineapples">Pineapples</option>
@@ -178,6 +184,7 @@
         <p>Customer Support: US +1 123 456 7890 | UK +44 12 3456 7890</p>
         <p>Made with ❤️ by <a href="">melipi</a></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 </html>
