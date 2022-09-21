@@ -271,19 +271,19 @@ main {
 }
 
 #origin-dropdown {
-    left: 0%;
+    left: -.1rem;
 }
 
 #dest-dropdown {
-    left: 25%;
+    left: 5rem;
 }
 
 #load-dropdown {
-    right: 25%;
+    right: 5rem;
 }
 
 #goods-dropdown {
-    right: 0%;
+    right: -.1rem;
 }
 
 .h3 {
