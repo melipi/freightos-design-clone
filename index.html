@@ -29,8 +29,11 @@
         <div class="search-bar">
             <div class="search-section" id="origin-search">
                 <p>Origin</p>
+                <span id="origin-validate"></span>
                 <p class="search-subtitle">
-                    Where are you shipping from?
+                    <span id="origin-type-subtitle">Where are you shipping from?</span>
+                    <span> | </span>
+                    <span id="origin-port-subtitle"></span>
                 </p>
             </div>
             <div class="search-dropdown hide" id="origin-dropdown">
@@ -41,7 +44,12 @@
                             <label for="origin-moves">Type</label>
                         </p>
                         <div class="select">
-                            <select class="form-select form-select-sm" name="origin-move-types" id="origin-moves" aria-label="Select Origin Move Type">
+                            <select 
+                            class="form-select form-select-sm" 
+                            name="origin-move-types" 
+                            id="origin-moves" 
+                            aria-label="Select Origin Move Type"
+                            required>
                                 <option value="">Please select an option</option>
                                 <option value="origin-sd">Door (SD)</option>
                                 <option value="origin-cy">Port (CY)</option>
@@ -53,8 +61,12 @@
                             <label for="origin-port">Port</label>
                         </p>
                         <div class="select">
-                            <select class="form-select form-select-sm" name="origin-move-port" id="origin-port"
-                            aria-label="Select Origin Port">
+                            <select 
+                            class="form-select form-select-sm" 
+                            name="origin-move-port" 
+                            id="origin-port"
+                            aria-label="Select Origin Port"
+                            required>
                                 <option value="">Please select an option</option>
                                 <option value="gtprq">GTPRQ (Puerto Quetzal, GT)</option>
                                 <option value="cobun">COBUN (Buenaventura, CO)</option>
