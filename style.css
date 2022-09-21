@@ -112,7 +112,7 @@ main {
 }
 
 .hero {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 .hero-title {
@@ -257,7 +257,7 @@ main {
 
 .search-dropdown {
     position: absolute;
-    top: 4.25rem;
+    top: 6rem;
     width: 30rem;
     height: 15rem;
     min-width: 10rem;
