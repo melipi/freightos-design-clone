@@ -60,17 +60,19 @@ document.addEventListener("click", e => {
     });
 });
 
+// Search Section
+
 const originText = document.querySelector("#origin-search");
 const originValidate = document.querySelector("#origin-validate");
 const originMoves = document.querySelector("#origin-moves");
 const originTypeText = document.querySelector("#origin-type-subtitle");
-
 const originPort = document.querySelector("#origin-port");
 const originPortText = document.querySelector("#origin-port-subtitle");
 
 let spanDivider = document.createElement("span");
 spanDivider.innerHTML = " | ";
 
+// Update subtitles
 originMoves.addEventListener("change", () => {
     originTypeText.innerHTML = originMoves.options[originMoves.selectedIndex].text;
     originMoves.append(spanDivider);
@@ -80,7 +82,7 @@ originPort.addEventListener("change", () => {
     originPortText.innerHTML = originPort.options[originPort.selectedIndex].text;
 });
 
-// Search Validation with Icon
+// Validation with Icon
 
 let checkmark = document.createElement("i");
 checkmark.classList.add("bi");
