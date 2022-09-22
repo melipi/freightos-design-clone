@@ -100,7 +100,10 @@ const originDropdown = document.querySelector("#origin-dropdown");
 
 originDropdown.addEventListener("change", () => {
     if (originMoves.value !== "" && originPort.value !==""){
-        originValidate.removeChild(exclamation);
+        // Remove exclamation if it exists before adding checkmark
+        if(originValidate.contains(exclamation)) {
+            originValidate.removeChild(exclamation);
+        }
         originValidate.append(checkmark);
     } else {
         // Remove checkmark if an option is deselected by user
