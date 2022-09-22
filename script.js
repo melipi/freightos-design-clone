@@ -30,6 +30,7 @@ const searchSections = document.querySelectorAll(".search-section");
 const dropdowns = document.querySelectorAll(".search-dropdown");
 const searchBar = document.querySelector(".search-bar");
 
+// Toggle Dropdowns
 searchSections.forEach ( elem => {
     elem.addEventListener("click", e => {
         if (elem.nextElementSibling.classList.contains("search-dropdown")) {
@@ -52,6 +53,7 @@ const hideDropdowns = () => {
 //     }
 // });
 
+// Closes dropdown on an outside click (if it's not the searchbar or dropdown)
 document.addEventListener("click", e => {
     dropdowns.forEach( elem => {
         if(!elem.contains(e.target) && !searchBar.contains(e.target)) {
@@ -60,17 +62,18 @@ document.addEventListener("click", e => {
     });
 });
 
-// Search Section
 
+// Divider for Search Section
+let spanDivider = document.createElement("span");
+spanDivider.innerHTML = " | ";
+
+// ORIGIN - Search Section
 const originText = document.querySelector("#origin-search");
 const originValidate = document.querySelector("#origin-validate");
 const originMoves = document.querySelector("#origin-moves");
 const originTypeText = document.querySelector("#origin-type-subtitle");
 const originPort = document.querySelector("#origin-port");
 const originPortText = document.querySelector("#origin-port-subtitle");
-
-let spanDivider = document.createElement("span");
-spanDivider.innerHTML = " | ";
 
 // Update subtitles
 originMoves.addEventListener("change", () => {
@@ -83,16 +86,27 @@ originPort.addEventListener("change", () => {
 });
 
 // Validation with Icon
-
 let checkmark = document.createElement("i");
 checkmark.classList.add("bi");
 checkmark.classList.add("bi-check");
 checkmark.classList.add("text-success");
 
+let exclamation = document.createElement("i");
+exclamation.classList.add("bi");
+exclamation.classList.add("bi-exclamation-circle");
+exclamation.classList.add("text-danger");
+
 const originDropdown = document.querySelector("#origin-dropdown");
 
 originDropdown.addEventListener("change", () => {
     if (originMoves.value !== "" && originPort.value !==""){
+        originValidate.removeChild(exclamation);
         originValidate.append(checkmark);
+    } else {
+        // Remove checkmark if an option is deselected by user
+        if(originValidate.contains(checkmark)) {
+            originValidate.removeChild(checkmark);
+        }
+        originValidate.append(exclamation);
     }
 });
