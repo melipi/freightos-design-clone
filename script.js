@@ -106,12 +106,14 @@ exclamation.classList.add("bi-exclamation-circle");
 exclamation.classList.add("text-danger");
 
 const originDropdown = document.querySelector("#origin-dropdown");
+const originHeading = document.querySelector(".search-heading");
 
 originDropdown.addEventListener("change", () => {
     if (originMoves.value !== "" && originPort.value !==""){
         // Remove exclamation if it exists before adding checkmark
         if(originValidate.contains(exclamation)) {
             originValidate.removeChild(exclamation);
+            originHeading.firstElementChild.classList.remove("text-danger");
         }
         originValidate.append(checkmark);
     } else {
@@ -120,5 +122,7 @@ originDropdown.addEventListener("change", () => {
             originValidate.removeChild(checkmark);
         }
         originValidate.append(exclamation);
+        originHeading.firstElementChild.classList.add("text-danger");
     }
 });
+
