@@ -1,3 +1,8 @@
+
+// *******************************************
+// ** Iterations of code that were scrapped **
+// *******************************************
+
 // // DOM
 // const originSearch = document.querySelector("#origin-search");
 // const originDropdown = document.querySelector("#origin-dropdown");
@@ -26,6 +31,17 @@
 //     }
 // });
 
+// // Buggy, selecting from dropdown closes dropdown
+// window.addEventListener("click", e => {
+//     if(!e.target.classList.contains("search-section") && !e.target.classList.contains("search-dropdown")) {
+//         hideDropdowns();
+//     }
+// });
+
+// ******************************************
+// ** FINAL JS FOR FREIGHTOS DESIGN CLONE **
+// ******************************************
+
 const searchSections = document.querySelectorAll(".search-section");
 const dropdowns = document.querySelectorAll(".search-dropdown");
 const searchBar = document.querySelector(".search-bar");
@@ -45,13 +61,6 @@ const hideDropdowns = () => {
         elem.classList.add("hide");
     });
 }
-
-// // Buggy, selecting from dropdown closes dropdown
-// window.addEventListener("click", e => {
-//     if(!e.target.classList.contains("search-section") && !e.target.classList.contains("search-dropdown")) {
-//         hideDropdowns();
-//     }
-// });
 
 // Closes dropdown on an outside click (if it's not the searchbar or dropdown)
 document.addEventListener("click", e => {
