@@ -158,6 +158,14 @@ main {
     max-width: 15vw;
 }
 
+.search-heading {
+    display: flex;
+}
+
+i {
+    padding-left: .5rem;
+}
+
 .search-button {
     height: 100%;
     display: flex;

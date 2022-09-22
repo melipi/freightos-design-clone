@@ -60,22 +60,37 @@ document.addEventListener("click", e => {
     });
 });
 
+const originText = document.querySelector("#origin-search");
+const originValidate = document.querySelector("#origin-validate");
 const originMoves = document.querySelector("#origin-moves");
 const originTypeText = document.querySelector("#origin-type-subtitle");
 
 const originPort = document.querySelector("#origin-port");
 const originPortText = document.querySelector("#origin-port-subtitle");
 
+let spanDivider = document.createElement("span");
+spanDivider.innerHTML = " | ";
+
 originMoves.addEventListener("change", () => {
-    originTypeText.innerHTML = originMoves.options[originMoves.selectedIndex].text
+    originTypeText.innerHTML = originMoves.options[originMoves.selectedIndex].text;
+    originMoves.append(spanDivider);
 });
 
 originPort.addEventListener("change", () => {
-    originPortText.innerHTML = originPort.options[originPort.selectedIndex].text
+    originPortText.innerHTML = originPort.options[originPort.selectedIndex].text;
 });
 
-const originValidate = document.querySelector("#origin-validate");
+// Search Validation with Icon
 
-if (originMoves.value !== "" && originPort.value !== "") {
-    
-}
+let checkmark = document.createElement("i");
+checkmark.classList.add("bi");
+checkmark.classList.add("bi-check");
+checkmark.classList.add("text-success");
+
+const originDropdown = document.querySelector("#origin-dropdown");
+
+originDropdown.addEventListener("change", () => {
+    if (originMoves.value !== "" && originPort.value !==""){
+        originValidate.append(checkmark);
+    }
+});
