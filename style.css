@@ -100,13 +100,6 @@ a:visited {
     box-shadow: inset 0 0 0 .1rem #184e77;
 }
 
-.user-icon {
-    width: .75rem;
-    height: .75rem;
-    border: .15rem solid #fff;
-    border-radius: 100%;
-}
-
 .button-text {
     padding-left: .3rem;
 }
@@ -167,7 +160,7 @@ main {
     display: flex;
 }
 
-i {
+.search-bar > i {
     padding-left: .5rem;
 }
 
