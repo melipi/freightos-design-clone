@@ -69,10 +69,27 @@ document.addEventListener("click", e => {
 const hideDropdowns = () => {
     dropdowns.forEach( elem => {
         elem.classList.add("hide");
-        elem.previousElementSibling.classList.remove("active");
+        elem.previousElementSibling.classList.remove("active"); // Needed if search section is the first one
         elem.nextElementSibling.classList.remove("active");
     });
 }
+
+// Search Section
+// -> Search Heading ***
+// --> originValidate ***
+// -> Search Subtitle
+// --> origin-type-subtitle ***
+// --> origin-port-subtitle ***
+
+// Search Dropdown - originDropdown ***
+// -> options-wrapper
+// --> dropdown-origin-type
+// ---> dropdown-label
+// ----> originMoves ***
+// -> dropdown-origin-port
+// --> div select
+// ---> originPort ***
+
 
 // ORIGIN - Search Section
 const originValidate = document.querySelector("#origin-validate");
