@@ -74,21 +74,21 @@ const hideDropdowns = () => {
     });
 }
 
-// Search Section
-// -> Search Heading ***
-// --> originValidate ***
-// -> Search Subtitle
-// --> origin-type-subtitle ***
-// --> origin-port-subtitle ***
+// Search Section **             searchSections[0]
+// -> Search Heading ***         searchSections[0].children[0]
+// --> originValidate ***        searchSections[0].children[0].children[1]
+// -> Search Subtitle            searchSections[0].children[1]
+// --> origin-type-subtitle ***  searchSections[0].children[1].children[0]
+// --> origin-port-subtitle ***  searchSections[0].children[1].children[2]
 
-// Search Dropdown - originDropdown ***
-// -> options-wrapper
-// --> dropdown-origin-type
-// ---> dropdown-label
-// ----> originMoves ***
-// -> dropdown-origin-port
-// --> div select
-// ---> originPort ***
+// Search Dropdown **            dropdowns[0]
+// -> options-wrapper            dropdowns[0].children[1]
+// --> dropdown-origin-type      dropdowns[0].children[1].children[0]
+// ---> dropdown-label           dropdowns[0].children[1].children[0].children[0]
+// ----> originMoves ***         dropdowns[0].children[1].children[0].children[0]
+// -> dropdown-origin-port       dropdowns[0].children[1].children[0].children[1].children[0]
+// --> div select                dropdowns[0].children[1].children[0].children[1].children[0]
+// ---> originPort ***           dropdowns[0].children[1].children[1].children[1].children[0]
 
 
 // ORIGIN - Search Section
