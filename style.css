@@ -145,6 +145,7 @@ main {
     padding: .5rem 1rem;
     font-size: .8rem;
     cursor: pointer;
+    border: 1px solid transparent; /* Added to prevent elements moving on active class toggle */
 
     /* From the Freightos Website */
     background: linear-gradient(rgb(198, 199, 199), rgb(198, 199, 199)) right center / 1px 40% no-repeat, transparent;
@@ -256,6 +257,12 @@ i {
 
 .hide {
     display: none;
+}
+
+.active {
+    border: 1px solid var(--colorAccent, --colorPrimaryDark);
+    box-shadow: 0 0 0 .2rem var(--colorBorder);
+    border-radius: .5rem;
 }
 
 .dropdown {

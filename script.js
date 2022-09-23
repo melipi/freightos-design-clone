@@ -53,14 +53,9 @@ searchSections.forEach ( elem => {
             hideDropdowns(); // Apply the .hide class before toggling the section's dropdown
             elem.nextElementSibling.classList.toggle("hide");
         }
+        elem.classList.add("active");
     });
 });
-
-const hideDropdowns = () => {
-    dropdowns.forEach( elem => {
-        elem.classList.add("hide");
-    });
-}
 
 // Closes dropdown on an outside click (if it's not the searchbar or dropdown)
 document.addEventListener("click", e => {
@@ -71,28 +66,22 @@ document.addEventListener("click", e => {
     });
 });
 
-
-// Divider for Search Section
-let spanDivider = document.createElement("span");
-spanDivider.innerHTML = " | ";
+const hideDropdowns = () => {
+    dropdowns.forEach( elem => {
+        elem.classList.add("hide");
+        elem.previousElementSibling.classList.remove("active");
+        elem.nextElementSibling.classList.remove("active");
+    });
+}
 
 // ORIGIN - Search Section
-const originText = document.querySelector("#origin-search");
 const originValidate = document.querySelector("#origin-validate");
 const originMoves = document.querySelector("#origin-moves");
 const originTypeText = document.querySelector("#origin-type-subtitle");
 const originPort = document.querySelector("#origin-port");
 const originPortText = document.querySelector("#origin-port-subtitle");
-
-// Update subtitles
-originMoves.addEventListener("change", () => {
-    originTypeText.innerHTML = originMoves.options[originMoves.selectedIndex].text;
-    originMoves.append(spanDivider);
-});
-
-originPort.addEventListener("change", () => {
-    originPortText.innerHTML = originPort.options[originPort.selectedIndex].text;
-});
+const originDropdown = document.querySelector("#origin-dropdown");
+const originHeading = document.querySelector(".search-heading");
 
 // Validation with Icon
 let checkmark = document.createElement("i");
@@ -105,8 +94,19 @@ exclamation.classList.add("bi");
 exclamation.classList.add("bi-exclamation-circle");
 exclamation.classList.add("text-danger");
 
-const originDropdown = document.querySelector("#origin-dropdown");
-const originHeading = document.querySelector(".search-heading");
+// Divider for Search Section
+let spanDivider = document.createElement("span");
+spanDivider.innerHTML = " | ";
+
+// Update subtitles
+originMoves.addEventListener("change", () => {
+    originTypeText.innerHTML = originMoves.options[originMoves.selectedIndex].text;
+    originMoves.append(spanDivider);
+});
+
+originPort.addEventListener("change", () => {
+    originPortText.innerHTML = originPort.options[originPort.selectedIndex].text;
+});
 
 originDropdown.addEventListener("change", () => {
     if (originMoves.value !== "" && originPort.value !==""){
@@ -125,4 +125,3 @@ originDropdown.addEventListener("change", () => {
         originHeading.firstElementChild.classList.add("text-danger");
     }
 });
-
