@@ -157,8 +157,8 @@ main {
     display: flex;
 }
 
-.search-bar > i {
-    padding-left: .5rem;
+#origin-validate > i {
+    padding-left: .25rem;
 }
 
 .search-button {

@@ -120,10 +120,6 @@ exclamation.classList.add("bi");
 exclamation.classList.add("bi-exclamation-circle");
 exclamation.classList.add("text-danger");
 
-// Divider for Search Section
-// let spanDivider = document.createElement("span");
-// spanDivider.innerHTML = " | ";
-
 originDropdown.addEventListener("change", () => {
     if (originMoves.value !== "" && originPort.value !==""){
         // Remove exclamation if it exists before adding checkmark
