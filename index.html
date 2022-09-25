@@ -37,7 +37,6 @@
                 </header>
                 <p class="search-subtitle" id="origin-heading">
                     <span id="origin-type-subtitle">Where are you shipping from?</span>
-                    <span> | </span>
                     <span id="origin-port-subtitle"></span>
                 </p>
             </div>
@@ -81,8 +80,14 @@
                 </div>
             </div>
             <div class="search-section" id="dest-search">
-                <p>Destination</p>
-                <p class="search-subtitle">Where are you shipping to?</p>
+                <header class="search-heading">
+                    <p>Destination</p>
+                    <span id="dest-validate"></span>
+                </header>
+                <p class="search-subtitle" id="dest-heading">
+                    <span id="dest-type-subtitle">Where are you shipping to?</span>
+                    <span id="dest-port-subtitle"></span>
+                </p>
             </div>
             <div class="search-dropdown hide" id="dest-dropdown">
                 <h3 class="h3">Where are you shipping to?</h3>
@@ -118,8 +123,14 @@
                 </div>
             </div>
             <div class="search-section" id="load-search">
-                <p>Load</p>
-                <p class="search-subtitle">What are you shipping?</p>
+                <header class="search-heading">
+                    <p>Load</p>
+                    <span id="load-validate"></span>
+                </header>
+                <p class="search-subtitle" id="load-heading">
+                    <span id="load-type-subtitle">What are you shipping?</span>
+                    <span id="load-port-subtitle"></span>
+                </p>
             </div>
             <div class="search-dropdown hide" id="load-dropdown">
                 <h3 class="h3">What are you shipping?</h3>
@@ -156,8 +167,14 @@
                 </div>
             </div>
             <div class="search-section" id="goods-search">
-                <p>Goods</p>
-                <p class="search-subtitle">Tell us about your goods</p>
+                <header class="search-heading">
+                    <p>Goods</p>
+                    <span id="goods-validate"></span>
+                </header>
+                <p class="search-subtitle" id="goods-heading">
+                    <span id="goods-type-subtitle">Tell us about your goods</span>
+                    <span id="goods-port-subtitle"></span>
+                </p>
             </div>
             <div class="search-dropdown hide" id="goods-dropdown">
                 <h3 class="h3">What goods are you shipping?</h3>
@@ -173,6 +190,21 @@
                                 <option value="">Please select an option</option>
                                 <option value="sugar">Sugar</option>
                                 <option value="pineapples">Pineapples</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dropdown-goods-ready">
+                        <p class="dropdown-label">
+                            <label for="goods-ready">Timeframe</label>
+                        </p>
+                        <div class="select">
+                            <select class="form-select form-select-sm"
+                            name="goods-ready" id="goods-ready"
+                            aria-label="Select timeframe">
+                                <option value="">Please select a timeframe</option>
+                                <option value="ready">Ready to load</option>
+                                <option value="lt-2weeks">Ready within two weeks</option>
+                                <option value="mt-2weeks">Ready in more than two weeks</option>
                             </select>
                         </div>
                     </div>
@@ -207,7 +239,7 @@
     </main>
     <footer class="center">
         <p>Customer Support: US +1 123 456 7890 | UK +44 12 3456 7890</p>
-        <p>Made with <i class="bi bi-suit-heart-fill"></i> by <a href="">melipi</a></p>
+        <p>Made by <a href="https://github.com/melipi"><i class="bi bi-github"></i> melipi</a></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./script.js"></script>

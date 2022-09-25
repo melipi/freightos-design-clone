@@ -85,11 +85,10 @@ const hideDropdowns = () => {
 // -> options-wrapper            dropdowns[0].children[1]
 // --> dropdown-origin-type      dropdowns[0].children[1].children[0]
 // ---> dropdown-label           dropdowns[0].children[1].children[0].children[0]
-// ----> originMoves ***         dropdowns[0].children[1].children[0].children[0]
-// -> dropdown-origin-port       dropdowns[0].children[1].children[0].children[1].children[0]
-// --> div select                dropdowns[0].children[1].children[0].children[1].children[0]
+// ----> originMoves ***         dropdowns[0].children[1].children[0].children[1].children[0]
+// -> dropdown-origin-port       dropdowns[0].children[1].children[1]
+// --> div select                dropdowns[0].children[1].children[1].children[1]
 // ---> originPort ***           dropdowns[0].children[1].children[1].children[1].children[0]
-
 
 // ORIGIN - Search Section
 const originValidate = document.querySelector("#origin-validate");
@@ -99,6 +98,16 @@ const originPort = document.querySelector("#origin-port");
 const originPortText = document.querySelector("#origin-port-subtitle");
 const originDropdown = document.querySelector("#origin-dropdown");
 const originHeading = document.querySelector(".search-heading");
+
+// Update subtitles
+// originMoves.addEventListener("change", () => {
+//     originTypeText.innerHTML = originMoves.options[originMoves.selectedIndex].text;
+//     originMoves.append(spanDivider);
+// });
+
+// originPort.addEventListener("change", () => {
+//     originPortText.innerHTML = originPort.options[originPort.selectedIndex].text;
+// });
 
 // Validation with Icon
 let checkmark = document.createElement("i");
@@ -112,18 +121,8 @@ exclamation.classList.add("bi-exclamation-circle");
 exclamation.classList.add("text-danger");
 
 // Divider for Search Section
-let spanDivider = document.createElement("span");
-spanDivider.innerHTML = " | ";
-
-// Update subtitles
-originMoves.addEventListener("change", () => {
-    originTypeText.innerHTML = originMoves.options[originMoves.selectedIndex].text;
-    originMoves.append(spanDivider);
-});
-
-originPort.addEventListener("change", () => {
-    originPortText.innerHTML = originPort.options[originPort.selectedIndex].text;
-});
+// let spanDivider = document.createElement("span");
+// spanDivider.innerHTML = " | ";
 
 originDropdown.addEventListener("change", () => {
     if (originMoves.value !== "" && originPort.value !==""){
@@ -141,4 +140,23 @@ originDropdown.addEventListener("change", () => {
         originValidate.append(exclamation);
         originHeading.firstElementChild.classList.add("text-danger");
     }
+});
+
+// Code for all search sections using dom select elements
+
+// Update Subtitles
+dropdowns.forEach ( dropElem => {
+    let firstSelect = dropElem.children[1].children[0].children[1].children[0];
+    firstSelect.addEventListener("change", () => {                   
+        let firstSub = firstSelect.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[0];
+        
+        firstSub.innerHTML = firstSelect.options[firstSelect.selectedIndex].text + " | ";
+    });
+
+    let secondSelect = dropElem.children[1].children[1].children[1].children[0];
+    secondSelect.addEventListener("change", () => {
+        let secondSub = secondSelect.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1];                
+        
+        secondSub.innerHTML = secondSelect.options[secondSelect.selectedIndex].text;
+    });
 });
