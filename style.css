@@ -157,7 +157,8 @@ main {
     display: flex;
 }
 
-#origin-validate > i {
+.bi-exclamation-circle,
+.bi-check {
     padding-left: .25rem;
 }
 

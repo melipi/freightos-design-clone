@@ -120,23 +120,23 @@ exclamation.classList.add("bi");
 exclamation.classList.add("bi-exclamation-circle");
 exclamation.classList.add("text-danger");
 
-originDropdown.addEventListener("change", () => {
-    if (originMoves.value !== "" && originPort.value !==""){
-        // Remove exclamation if it exists before adding checkmark
-        if(originValidate.contains(exclamation)) {
-            originValidate.removeChild(exclamation);
-            originHeading.firstElementChild.classList.remove("text-danger");
-        }
-        originValidate.append(checkmark);
-    } else {
-        // Remove checkmark if an option is deselected by user
-        if(originValidate.contains(checkmark)) {
-            originValidate.removeChild(checkmark);
-        }
-        originValidate.append(exclamation);
-        originHeading.firstElementChild.classList.add("text-danger");
-    }
-});
+// originDropdown.addEventListener("change", () => {
+//     if (originMoves.value !== "" && originPort.value !==""){
+//         // Remove exclamation if it exists before adding checkmark
+//         if(originValidate.contains(exclamation)) {
+//             originValidate.removeChild(exclamation);
+//             originHeading.firstElementChild.classList.remove("text-danger");
+//         }
+//         originValidate.append(checkmark);
+//     } else {
+//         // Remove checkmark if an option is deselected by user
+//         if(originValidate.contains(checkmark)) {
+//             originValidate.removeChild(checkmark);
+//         }
+//         originValidate.append(exclamation);
+//         originHeading.firstElementChild.classList.add("text-danger");
+//     }
+// });
 
 // Code for all search sections using dom select elements
 
@@ -154,5 +154,25 @@ dropdowns.forEach ( dropElem => {
         let secondSub = secondSelect.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1];                
         
         secondSub.innerHTML = secondSelect.options[secondSelect.selectedIndex].text;
+    });
+
+    dropElem.addEventListener ("change", () => {
+
+        if (firstSelect.value !== "" && secondSelect.value !== "") {
+            // Remove exclamation mark if it exists
+            if (dropElem.previousElementSibling.children[0].children[1].contains(exclamation)) {
+                dropElem.previousElementSibling.children[0].children[1].removeChild(exclamation);
+                dropElem.previousElementSibling.children[0].firstElementChild.classList.remove("text-danger");
+            }
+            dropElem.previousElementSibling.children[0].children[1].append(checkmark);
+        } else {
+            // Remove checkmark if an option is deselected by user
+            if (dropElem.previousElementSibling.children[0].children[1].contains(checkmark)) {
+                dropElem.previousElementSibling.children[0].children[1].removeChild(checkmark);
+            }
+            dropElem.previousElementSibling.children[0].children[1].append(exclamation);
+            dropElem.previousElementSibling.children[0].firstElementChild.classList.add("text-danger");
+        };
+
     });
 });
