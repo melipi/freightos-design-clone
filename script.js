@@ -111,11 +111,16 @@ searchSections.forEach ( elem => {
 
 // Closes dropdown on an outside click (if it's not the searchbar or dropdown)
 document.addEventListener("click", e => {
-    dropdowns.forEach( elem => {
-        if(!elem.contains(e.target) && !searchBar.contains(e.target)) {
-            hideDropdowns();
-        }
-    });
+    // dropdowns.forEach( elem => {
+    //     if(!elem.contains(e.target) && !searchBar.contains(e.target)) {
+    //         hideDropdowns();
+    //     }
+    // });
+
+    // Alternative with closest
+    if (!e.target.closest(".search-section") && !e.target.closest(".search-dropdown")) {
+        hideDropdowns();
+    }
 });
 
 const hideDropdowns = () => {
