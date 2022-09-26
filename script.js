@@ -1,4 +1,3 @@
-
 // *******************************************
 // ** Iterations of code that were scrapped **
 // *******************************************
@@ -53,6 +52,15 @@
 // -> dropdown-origin-port       dropdowns[0].children[1].children[1]
 // --> div select                dropdowns[0].children[1].children[1].children[1]
 // ---> originPort ***           dropdowns[0].children[1].children[1].children[1].children[0]
+
+// ORIGIN - Search Section
+// const originValidate = document.querySelector("#origin-validate");
+// const originMoves = document.querySelector("#origin-moves");
+// const originTypeText = document.querySelector("#origin-type-subtitle");
+// const originPort = document.querySelector("#origin-port");
+// const originPortText = document.querySelector("#origin-port-subtitle");
+// const originDropdown = document.querySelector("#origin-dropdown");
+// const originHeading = document.querySelector(".search-heading");
 
 // Update subtitles
 // originMoves.addEventListener("change", () => {
@@ -118,28 +126,6 @@ const hideDropdowns = () => {
     });
 }
 
-// ORIGIN - Search Section
-const originValidate = document.querySelector("#origin-validate");
-const originMoves = document.querySelector("#origin-moves");
-const originTypeText = document.querySelector("#origin-type-subtitle");
-const originPort = document.querySelector("#origin-port");
-const originPortText = document.querySelector("#origin-port-subtitle");
-const originDropdown = document.querySelector("#origin-dropdown");
-const originHeading = document.querySelector(".search-heading");
-
-// Validation with Icon
-let checkmark = document.createElement("i");
-checkmark.classList.add("bi");
-checkmark.classList.add("bi-check");
-checkmark.classList.add("text-success");
-
-let exclamation = document.createElement("i");
-exclamation.classList.add("bi");
-exclamation.classList.add("bi-exclamation-circle");
-exclamation.classList.add("text-danger");
-
-// Code for all search sections using dom select elements
-
 // Update Subtitles
 dropdowns.forEach ( dropElem => {
     let firstSelect = dropElem.children[1].children[0].children[1].children[0];
@@ -156,23 +142,22 @@ dropdowns.forEach ( dropElem => {
         secondSub.innerHTML = secondSelect.options[secondSelect.selectedIndex].text;
     });
 
+    // Update status of user input with a checkmark or exclamation mark
     dropElem.addEventListener ("change", () => {
+        let statusText = dropElem.previousElementSibling.children[0].firstElementChild;
+        let checkmark = dropElem.previousElementSibling.children[0].children[1].children[0];
+        let exclamation = dropElem.previousElementSibling.children[0].children[1].children[1];
 
         if (firstSelect.value !== "" && secondSelect.value !== "") {
             // Remove exclamation mark if it exists
-            if (dropElem.previousElementSibling.children[0].children[1].contains(exclamation)) {
-                dropElem.previousElementSibling.children[0].children[1].removeChild(exclamation);
-                dropElem.previousElementSibling.children[0].firstElementChild.classList.remove("text-danger");
-            }
-            dropElem.previousElementSibling.children[0].children[1].append(checkmark);
+            exclamation.classList.add("hide");
+            checkmark.classList.remove("hide");
+            statusText.classList.remove("text-danger");
         } else {
             // Remove checkmark if an option is deselected by user
-            if (dropElem.previousElementSibling.children[0].children[1].contains(checkmark)) {
-                dropElem.previousElementSibling.children[0].children[1].removeChild(checkmark);
-            }
-            dropElem.previousElementSibling.children[0].children[1].append(exclamation);
-            dropElem.previousElementSibling.children[0].firstElementChild.classList.add("text-danger");
+            checkmark.classList.add("hide");
+            exclamation.classList.remove("hide");
+            statusText.classList.add("text-danger");
         };
-
     });
 });
