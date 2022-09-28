@@ -312,6 +312,12 @@ main {
     padding-bottom: .5rem;
 }
 
+.active-submit {
+    border-radius: .25rem;
+    background: var(--colorAccent);
+    color: var(--colorBackground);
+}
+
 footer {
     padding: 1rem;
     font-weight: 400;

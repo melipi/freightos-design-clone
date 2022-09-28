@@ -164,5 +164,26 @@ dropdowns.forEach ( dropElem => {
             exclamation.classList.remove("hide");
             statusText.classList.add("text-danger");
         };
+
+        const search = document.querySelector(".search-button");
+        const selects = document.querySelectorAll(".form-select");
+
+        // Counter for select elements with user input
+        let counter = 0;
+        selects.forEach( s => {
+            
+            if (s.value !==""){
+                counter++;
+            }
+        });
+
+        // Toggle active search button
+        if (counter === 8) {
+            console.log("all active")
+            search.classList.add("active-submit");
+        } else {
+            search.classList.remove("active-submit");
+        }
+
     });
 });
