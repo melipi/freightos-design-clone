@@ -171,13 +171,19 @@ main {
     color: #a0a6cc;
     background: transparent;
     border: none;
-    cursor: pointer;
 }
 
 .submit {
     padding: 1rem;
     width: 10rem;
     background: none;
+}
+
+.active-submit {
+    cursor: pointer;
+    border-radius: .25rem;
+    background: var(--colorAccent);
+    color: var(--colorBackground);
 }
 
 .content {
@@ -285,11 +291,11 @@ main {
 }
 
 #dest-dropdown {
-    left: 5rem;
+    left: 25%;
 }
 
 #load-dropdown {
-    right: 5rem;
+    right: 25%;
 }
 
 #goods-dropdown {
@@ -310,12 +316,6 @@ main {
 
 .dropdown-label {
     padding-bottom: .5rem;
-}
-
-.active-submit {
-    border-radius: .25rem;
-    background: var(--colorAccent);
-    color: var(--colorBackground);
 }
 
 footer {
