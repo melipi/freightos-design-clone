@@ -170,6 +170,7 @@ main {
     line-height: 1;
     color: #a0a6cc;
     background: transparent;
+    cursor: not-allowed;
     border: none;
 }
 

@@ -175,14 +175,17 @@ dropdowns.forEach ( dropElem => {
             if (s.value !==""){
                 counter++;
             }
+            }
         });
 
         // Toggle active search button
         if (counter === 8) {
             console.log("all active")
             search.classList.add("active-submit");
+            search.removeAttribute("disabled");
         } else {
             search.classList.remove("active-submit");
+            search.setAttribute("disabled");
         }
 
     });
