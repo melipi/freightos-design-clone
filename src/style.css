@@ -205,17 +205,11 @@ main {
     margin: 5rem 0 3rem 0;
 }
 
-.placeholder-img {
-    height: 150px;
-    background: rgba(0,0,0,0.25);
-    margin-bottom: 1rem;
-}
-
 .content-heading {
     font-size: 1.5rem;
     text-transform: uppercase;
     color: rgba(0,0,0,0.85);
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .content-text {
@@ -317,6 +311,10 @@ main {
 
 .dropdown-label {
     padding-bottom: .5rem;
+}
+
+img {
+    width: 100%;
 }
 
 footer {
