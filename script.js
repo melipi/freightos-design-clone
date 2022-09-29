@@ -186,6 +186,5 @@ dropdowns.forEach ( dropElem => {
             search.classList.remove("active-submit");
             search.setAttribute("disabled", "");
         }
-
     });
 });
