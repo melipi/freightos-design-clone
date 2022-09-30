@@ -232,6 +232,14 @@ main {
     cursor: pointer;
 }
 
+.content-img {
+    margin: 0 auto;
+}
+
+img {
+    max-height: 150px;
+}
+
 .options-wrapper {
     display: flex;
     justify-content: space-between;
@@ -311,10 +319,6 @@ main {
 
 .dropdown-label {
     padding-bottom: .5rem;
-}
-
-img {
-    width: 100%;
 }
 
 footer {
