@@ -322,8 +322,25 @@ img {
 }
 
 footer {
-    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     padding: 1rem;
     font-weight: 400;
     font-size: .75rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-wrapper li:first-child {
+    list-style-type: none;
+}
+
+.footer-wrapper li {
+    margin: 0 .5rem;
+    list-style: inside;
 }
