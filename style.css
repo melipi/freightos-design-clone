@@ -165,6 +165,7 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 8rem;
 }
 
 .search-heading {
@@ -333,7 +334,6 @@ img {
     #origin-dropdown {
         top: 17.25rem;
     }
-
 }
 
 .h3 {
