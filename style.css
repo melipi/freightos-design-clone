@@ -128,7 +128,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     max-width: 70rem;
-    margin: 1rem auto 0 auto;
+    margin: 1rem;
     border-radius: .5rem;
     border: .1rem solid rgb(198, 199, 199);
     box-shadow:
@@ -320,6 +320,20 @@ img {
 
 #goods-dropdown {
     right: -.1rem;
+}
+
+@media (max-width: 48rem) {
+    #dest-dropdown,
+    #load-dropdown,
+    #goods-dropdown {
+        left: -.1rem;
+        top: 17.25rem;
+    }
+
+    #origin-dropdown {
+        top: 17.25rem;
+    }
+
 }
 
 .h3 {
