@@ -119,12 +119,16 @@ main {
     margin-top: 3rem;
 }
 
+.hero-text {
+    padding: 0 3rem;
+}
+
 .search-bar {
     position: relative; /* Setting parent element to relative for absolute positioning of the dropdowns */
+    display: flex;
+    flex-flow: row wrap;
     max-width: 70rem;
     margin: 1rem auto 0 auto;
-    display: flex;
-    justify-content: space-between;
     border-radius: .5rem;
     border: .1rem solid rgb(198, 199, 199);
     box-shadow:
@@ -133,12 +137,24 @@ main {
 }
 
 .search-section {
-    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
     padding: .5rem 1rem;
     font-size: .8rem;
     cursor: pointer;
     border: 1px solid transparent; /* Added to prevent elements moving on active class toggle */
     border-right: 1px solid var(--colorBorder);
+}
+
+@media (max-width: 48rem) {
+    .search-section {
+        width: 40rem;
+        border-bottom: 1px solid var(--colorBorder);
+    }
 }
 
 .search-subtitle {
@@ -149,7 +165,6 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 15vw;
 }
 
 .search-heading {
@@ -174,6 +189,9 @@ main {
 }
 
 .submit {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
     padding: 1rem;
     background: none;
 }
@@ -201,7 +219,7 @@ main {
     flex-direction: column;
     min-width: 20vw;
     height: 100%;
-    padding: 3rem;
+    padding: 0 3rem;
 }
 
 .content-heading {
