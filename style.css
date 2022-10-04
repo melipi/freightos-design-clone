@@ -168,6 +168,12 @@ main {
     max-width: 8rem;
 }
 
+@media (max-width: 48rem) {
+    .search-subtitle {
+        max-width: none;
+    }
+}
+
 .search-heading {
     display: flex;
 }
