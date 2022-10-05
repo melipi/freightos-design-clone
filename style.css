@@ -276,6 +276,12 @@ img {
     width: 100%;
 }
 
+@media (max-width: 48rem) {
+    .options-wrapper {
+        justify-content: space-around;
+    }
+}
+
 .option-heading {
     font-size: 1.25rem;
     padding: 1rem 0 2rem 0;
@@ -317,6 +323,12 @@ img {
     box-shadow: 0 0 10px 0 rgb(35 37 55 / 12%);
     overflow: auto;
     z-index: 1;
+}
+
+@media (max-width: 48rem) {
+    .search-dropdown {
+        width: 100%;
+    }
 }
 
 #origin-dropdown {
