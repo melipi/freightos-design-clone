@@ -83,7 +83,6 @@ dropdowns.forEach ( dropElem => {
 
         // Toggle active search button
         if (counter === 8) {
-            console.log("all active")
             search.classList.add("active-submit");
             search.removeAttribute("disabled");
         } else {
