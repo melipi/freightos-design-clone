@@ -165,7 +165,13 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 8rem;
+    max-width: none;
+}
+
+@media (max-width: 64rem) {
+    .search-subtitle {
+        max-width: 9rem;
+    }
 }
 
 @media (max-width: 48rem) {
