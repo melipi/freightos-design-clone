@@ -9,3 +9,6 @@ Recreate the [Freightos](ship.freightos.com) website with as few frameworks as p
 3. Vanilla JS (ES6+)
 4. Bootstrap (For the single select dropdowns and the svg icons)
 
+### Challenges
+1. Recreating the search options bar
+- Event delegation became the key technique for the JS to work on the nested HTML elements
