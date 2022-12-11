@@ -344,7 +344,7 @@ img {
 }
 
 #goods-dropdown {
-    right: -.1rem;
+    right: -.5rem;
 }
 
 @media (max-width: 48rem) {
